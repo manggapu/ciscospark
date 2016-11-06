@@ -11,13 +11,15 @@ from ciscospark import webhooks
 token = "INSERT YOUR USER AUTH TOKEN"
 
 
-# list people with a certain email address
+# sample request to Cisco Spark API
 resp = people.list (token, email='devsupport@ciscospark.com')
 
 
 # pretty format returned response
-resp_dict = resp['items']
-for x in resp_dict:
-    for y in x:
-        print y + " = " + str(x[y])
-    print ""
+for k, v in resp.iteritems():
+    if isinstance(v, dict):
+        print ("%s = " % k)
+        for k in v:
+            print ("\t" + k + " = " + str(v[k]))
+    else:
+            print (k + " = " + str(v))
