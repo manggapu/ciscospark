@@ -5,6 +5,7 @@ from ciscospark import messages
 from ciscospark import teams
 from ciscospark import team_memberships
 from ciscospark import webhooks
+import json
 
 
 # set your user auth token
@@ -16,10 +17,4 @@ resp = people.list (token, email='devsupport@ciscospark.com')
 
 
 # pretty format returned response
-for k, v in resp.iteritems():
-    if isinstance(v, dict):
-        print ("%s = " % k)
-        for k in v:
-            print ("\t" + k + " = " + str(v[k]))
-    else:
-            print (k + " = " + str(v))
+print json.dumps(resp, sort_keys=True, indent=4, separators=(',', ': '))
