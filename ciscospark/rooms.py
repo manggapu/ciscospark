@@ -4,16 +4,6 @@ import re
 import common
 
 
-def findroomidbyname(token, roomname):
-    room_dict = get_rooms(common._sparktoken(token))
-    for room in room_dict['items']:
-        # print (room['title'])
-        if room['title'] == roomname:
-            return room['id']
-        else:
-            return
-
-
 # GET Requests
 def list(token, teamId='', max=0, type=''):
     headers = {'Authorization': common._sparktoken(token)}
