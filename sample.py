@@ -17,4 +17,4 @@ req = people.list (token, email='devsupport@ciscospark.com')
 
 
 # pretty format returned response
-print json.dumps(req, sort_keys=True, indent=4, separators=(',', ': '))
+print json.dumps (req, sort_keys=True, indent=4, separators=(',', ': '))
