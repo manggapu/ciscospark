@@ -7,7 +7,7 @@ Build notes:
 - Requires pip install requests-toolbelt
 
 Features:
-- Maps exactly to all functions and parameters of the 7 main APIs 
+- Maps to all functions and parameters of the 7 main APIs 
 - These include people, rooms, messages, teams, memberships, team memberships, webhooks
 
 sample.py shows you how to start using ciscospark today!
