@@ -13,8 +13,8 @@ token = "INSERT YOUR USER AUTH TOKEN"
 
 
 # sample request to Cisco Spark API
-resp = people.list (token, email='devsupport@ciscospark.com')
+req = people.list (token, email='devsupport@ciscospark.com')
 
 
 # pretty format returned response
-print json.dumps(resp, sort_keys=True, indent=4, separators=(',', ': '))
+print json.dumps(req, sort_keys=True, indent=4, separators=(',', ': '))
